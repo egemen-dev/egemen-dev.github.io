@@ -19,8 +19,8 @@ Active Record callbacks in Rails are a double-edged sword, offering automation w
 ## Callback Usage Examples:
 
 Example - Fictional code example with multiple callbacks
-{% highlight ruby %}
-```
+
+```ruby
 class Order < ApplicationRecord
   belongs_to :user
 
@@ -61,7 +61,6 @@ class Order < ApplicationRecord
   end
 end
 ```
-{% endhighlight %}
 
 The `Order` model currently hosts callback methods, entangled with method logic defined within each function. Additionally, certain callbacks are detached from the core functionality of the `Order` object. This setup complicates testing and debugging, potentially making it challenging to identify and rectify issues.
 
