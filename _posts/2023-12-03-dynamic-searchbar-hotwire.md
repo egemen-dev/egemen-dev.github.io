@@ -8,7 +8,7 @@ Ever envisioned seamlessly incorporating a dynamic search bar into your web app,
 
 ### Example behaviour:
  
-![small_search](https://github.com/egemen-dev/articles/assets/93445248/d6ca57f0-fcaf-4313-9686-1a8be37b32fe)
+![Screenshot 2024-03-13 at 21 27 52](https://github.com/egemen-dev/egemen-dev.github.io/assets/93445248/616c802e-c15c-40cd-ac56-c6c0cbfb074e)
 
 In this straightforward example, we're using a Book model with just one attribute: its title. The goal is to perform searches based on these book titles.
 
@@ -83,7 +83,7 @@ Index view file.
   data-controller="search"               <-- Connecting stimulus controller 'search_controller.js'
   data-action="input->search#search"     <-- This search() method will be called inside our stimulus controller in every keystroke 
   data-search-target="searchBox"         <-- Sets the target name so we can get this spesifc DOM and read its input value inside the stimulus controller
-  data-path="<%= search_books_path %>"   <-- Sets the path. We are going to use this path to send our serach requests inside the stimulus controller
+  data-path="<%= search_books_path %>"   <-- Sets the path. We are going to use this path to send our search requests inside the stimulus controller
 />
 
 <div id="books">
