@@ -1,4 +1,4 @@
-#  RoR - How to create a dynamic search bar with Hotwire?
+# How to create a dynamic search bar with Hotwire?
 
 
 Ever envisioned seamlessly incorporating a dynamic search bar into your web app, instantly triggered upon typing? Discover how to effortlessly implement this feature in your Rails 7 application using the powerful combination of Stimulus and TurboStream, a.k.a. Hotwire.
