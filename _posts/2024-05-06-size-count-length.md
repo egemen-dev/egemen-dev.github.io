@@ -8,6 +8,8 @@ Consider we got a variable that holds all the users.
   users = User.all
 ```
 
+<br>
+
 ### COUNT
 ```
   users.count
