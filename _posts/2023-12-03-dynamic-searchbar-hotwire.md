@@ -8,7 +8,7 @@ Ever envisioned seamlessly incorporating a dynamic search bar into your web app,
 
 ### Example behaviour:
  
-![Screenshot 2024-03-13 at 21 27 52](https://private-user-images.githubusercontent.com/93445248/287509747-d6ca57f0-fcaf-4313-9686-1a8be37b32fe.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTY3NTczODQsIm5iZiI6MTcxNjc1NzA4NCwicGF0aCI6Ii85MzQ0NTI0OC8yODc1MDk3NDctZDZjYTU3ZjAtZmNhZi00MzEzLTk2ODYtMWE4YmUzN2IzMmZlLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA1MjYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNTI2VDIwNTgwNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA5OWZkMmFiN2IzNTYxOTg2MmY1MWU3OGZkY2I4NjM4NjcxNWZmOTg2YTRiMmJmOWE2NDE1ZGRkM2Y3ZDZkY2EmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.wxECpVi19sfux30r41PWbnJqCsXLBiK1xGUGMou_AAY)
+![Screenshot 2024-03-13 at 21 27 52](https://i.ibb.co/7bFwTgS/search.gif)
 
 In this straightforward example, we're using a Book model with just one attribute: its title. The goal is to perform searches based on these book titles.
 
