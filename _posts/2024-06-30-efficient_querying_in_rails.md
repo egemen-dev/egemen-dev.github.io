@@ -5,7 +5,7 @@ In Ruby on Rails, `includes(*args)`, `preload(*args)`, `eager_load(*args)` and `
 #### _Example:_
 We have a User model that can have many ShortPost and LongPost, so they belong to the User.
 
-</br>
+<br>
 
 ## includes
 
@@ -26,7 +26,7 @@ SELECT "long_posts".* FROM "long_posts" WHERE "long_posts"."user_id" IN (?, ?, ?
 > `includes` generates seperate queries for each specified association and loads `User`, `ShortPost` and `LongPost` records to the memory.
 
 
-</br>
+<br>
 
 ## eager_load
 ```
@@ -55,7 +55,7 @@ WHERE "users"."id" IN (?, ?, ?, ?, ?)
 
 > Because this query will return all records from the left table, regardless of whether they have a match in the right table, along with any matching records from the right table, it's better to be cautious.
 
-</br>
+<br>
 
 
 ## preload
@@ -73,7 +73,7 @@ SELECT "long_posts".* FROM "long_posts" WHERE "long_posts"."user_id" IN (?, ?, ?
 
 > `preload` generates seperate queries for each specified association and loads `User`, `ShortPost` and `LongPost` records to the memory.
 
-</br>
+<br>
 
 ## joins
 
@@ -94,7 +94,7 @@ WHERE "short_posts"."published" = 1 AND "long_posts"."published" = 0;
 
 > `joins` uses simple INNER JOIN and does not load associated records to the memory, meaning that it will trigger N+1 if you try to access associated data columns. However, it's handy for building conditional queries for spesific data matching and filtering.
 
-</br>
+<br>
 
 ## TAKEAWAY
 
@@ -105,4 +105,4 @@ Each method serves different purposes:
 * `joins` performs an inner join to filter results based on specified conditions, useful for fetching filtered datasets efficiently, **not ideal** for reducing N+1 query issues.
 * `includes` it will decide if it'll use `eager_load` or `preload` under the hood, ideal for reducing N+1 query issues.
 
-</br>
+<br>
