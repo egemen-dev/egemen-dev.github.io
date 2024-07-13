@@ -2,29 +2,12 @@
 
 In Ruby on Rails, `includes(*args)`, `preload(*args)`, `eager_load(*args)` and `joins(*args)` are powerful ActiveRecord query methods. These query methods are often used to optimize data loading and prevent N+1 query problems. However, the way they work under the hood is not the same. Here's a detailed explanation of what happens with each method.
 
-#### _Example:_
-We have a User model that can have many ShortPost and LongPost, so they belong to the User.
-
-<br>
+#### _Example Structure:_
+We have a User model that can have many ShortPost and LongPost.
 
 ## includes
 
 `includes` is dynamic. It is a shorthand for `eager_load` and `preload`. It will either generate a single LEFT OUTTER JOIN like `eager_load` (e.g., if you have a `where` clause that references a relationship) or loop over every association and generate seperate query for each just like `preload`.
-
-```
-users = User.includes(:short_posts, :long_posts)
-```
-
-This will generate SQL query similar to the following:
-
-```
-SELECT "users".* FROM "users"
-SELECT "short_posts".* FROM "short_posts" WHERE "short_posts"."user_id" IN (?, ?, ?, ?, ?)
-SELECT "long_posts".* FROM "long_posts" WHERE "long_posts"."user_id" IN (?, ?, ?, ?, ?)
-```
-
-> `includes` generates seperate queries for each specified association and loads `User`, `ShortPost` and `LongPost` records to the memory.
-
 
 <br>
 
