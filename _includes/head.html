@@ -8,8 +8,33 @@
     {%- include google-analytics.html -%}
   {%- endif -%}
 
-
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 
+  <style>
+    *,:before,:after {
+      box-sizing:none;
+    }
+
+    pre,code {
+      /* font-size:15px; */
+      /* border:1px solid #e8e8e8; */
+      /* border-radius:3px; */
+      /* background-color:#eef; */
+    }
+
+    .site-title,.site-title:visited {
+      /* color:#424242; */
+    }
+
+    .site-title {
+      /* font-size:26px; */
+      /* font-weight:300; */
+      /* line-height:54px; */
+      /* letter-spacing:-1px; */
+      /* margin-bottom:0; */
+      float: left;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
 </head>
