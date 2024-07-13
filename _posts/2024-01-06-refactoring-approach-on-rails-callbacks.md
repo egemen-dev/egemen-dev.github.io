@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Leveraging Service Objects and Concerns in Refactoring Rails Model Callbacks"
+date: 2024-01-06 20:00:00 +0300
+---
+
 # Leveraging Service Objects and Concerns in Refactoring Rails Model Callbacks
 
 ![Dog sitting in front of the laptop](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/odyf6uug65jkfxmfo54f.gif)
@@ -14,13 +20,12 @@ Active Record callbacks in Rails are a double-edged sword, offering automation w
 * Unforeseen Impacts: Callbacks might inadvertently trigger unintended side effects, especially when altering associated models.
 * Testing and Maintenance Hurdles: Extensive callback usage can complicate testing procedures and make maintenance a daunting task.
 
----
 
 ## Callback Usage Examples:
 
 Example - Fictional code example with multiple callbacks
 
-```ruby
+```rb
 class Order < ApplicationRecord
   belongs_to :user
 
@@ -70,7 +75,7 @@ Now, let's refactor this example. Here's how we'd do it:
 
 ## Creating Service Objects
 
-```ruby
+```rb
   class Mailer
     def self.send_confirmation_email(order)
       # Send confirmation email logic here...
@@ -86,7 +91,7 @@ Now, let's refactor this example. Here's how we'd do it:
 
 ## Creating Concerns and Using Service Objects
 
-```ruby
+```rb
   module Logable
     extend ActiveSupport::Concern
   
@@ -104,7 +109,7 @@ Now, let's refactor this example. Here's how we'd do it:
 
 ## Refactored version of the model
 
-```ruby
+```rb
   class Order < ApplicationRecord
     belongs_to :user
   

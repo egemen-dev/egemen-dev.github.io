@@ -1,3 +1,9 @@
+---
+layout: post
+title: "What causes double render and how to prevent it?"
+date: 2024-03-01 20:00:00 +0300
+---
+
 # What causes double render and how to prevent it?
 
 In ruby on rails backend development, developers might face a common situation captured in the following code snippet:

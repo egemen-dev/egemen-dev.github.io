@@ -1,27 +1,33 @@
+---
+layout: post
+title: "Size, Count, and Length Walk into a Rails App: Who Wins?"
+date: 2024-05-06 20:00:00 +0300
+---
+
 # Size, Count, and Length Walk into a Rails App: Who Wins?
 
 In Ruby on Rails we got three similar looking methods `count()`, `length()` and `size()`. Let's see what they do under the hood.
 
 
 Consider we got a variable that holds all the users.
-```
+```rb
   users = User.all
 ```
 
 <br>
 
 ### COUNT
-```
+```rb
   users.count
 
-  => SELECT COUNT(*) FROM “users”
+  => SELECT COUNT(*) FROM "users"
 ```
 `count()` always performs `SQL COUNT` query, no matter how many times you call it.
 
 <br>
 
 ### LENGTH
-```
+```rb
   users.length
 
   => SELECT "users".* FROM "users"
@@ -31,7 +37,7 @@ Consider we got a variable that holds all the users.
 <br>
 
 ### SIZE
-```
+```rb
   users.size
 
   => SELECT COUNT(*) FROM "users"

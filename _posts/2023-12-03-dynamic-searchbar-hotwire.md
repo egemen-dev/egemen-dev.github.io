@@ -1,5 +1,10 @@
-# How to create a dynamic search bar with Hotwire?
+---
+layout: post
+title: "How to create a dynamic search bar with Hotwire?"
+date: 2023-12-03 20:00:00 +0300
+---
 
+# How to create a dynamic search bar with Hotwire?
 
 Ever envisioned seamlessly incorporating a dynamic search bar into your web app, instantly triggered upon typing? Discover how to effortlessly implement this feature in your Rails 7 application using the powerful combination of Stimulus and TurboStream, a.k.a. Hotwire.
 ### Used gems:
@@ -15,7 +20,7 @@ In this straightforward example, we're using a Book model with just one attribut
 ## Routes
 Basic routes.
 
-```ruby
+```rb
 #routes.rb
 
 Rails.application.routes.draw do
@@ -32,7 +37,7 @@ end
 ## Migration
 Before creating any book we first need to create a simple migration.
 
-```ruby
+```rb
 #create_books.rb
 
 class CreateBooks < ActiveRecord::Migration[7.1]
@@ -49,7 +54,7 @@ end
 ## Seed
 Creation of the dummy books with faker gem.
 
-```ruby
+```rb
 #seed.rb
 
 100.times do
@@ -125,7 +130,7 @@ This turbo_stream view plays a crucial role in our functionality as it replaces 
 ## JS Controller
 This is the search_controller.js and it constructs the search query.
 
-```javascript
+```js
 #search_controller.js
 
 import { Controller } from "@hotwired/stimulus";
@@ -151,7 +156,7 @@ export default class extends Controller {
 
 This is how the books_controller.rb looks like, it gets the job done. You can customize it as you wish. Maybe add limit to the seach query or add pagination :)
 
-```ruby
+```rb
 #books_controller.rb
 
 class BooksController < ApplicationController
