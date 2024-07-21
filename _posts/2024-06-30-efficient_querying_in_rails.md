@@ -12,10 +12,10 @@ In Ruby on Rails, `includes`, `preload`, `eager_load` and `joins` are powerful A
 
 Each method serves different purposes:
 
-* `eager_load` fetches all associated records in a _single query_, ideal for reducing N+1 query issues.
-* `preload` issues _separate queries_ to preload associations, ideal for reducing N+1 query issues.
+* `eager_load` fetches all associated records in a single query, **ideal** for reducing N+1 query issues.
+* `preload` issues separate queries to preload associations, **ideal** for reducing N+1 query issues.
 * `joins` performs an inner join to filter results based on specified conditions, useful for fetching filtered datasets efficiently, **not ideal** for reducing N+1 query issues.
-* `includes` it will decide if it'll use `eager_load` or `preload` under the hood, ideal for reducing N+1 query issues.
+* `includes` it will decide if it'll use `eager_load` or `preload` under the hood, **ideal** for reducing N+1 query issues.
 
 <br>
 
